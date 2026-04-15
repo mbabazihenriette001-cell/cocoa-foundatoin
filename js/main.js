@@ -1,4 +1,4 @@
-// Website functionality: theme, mobile toggle, and scroll effects
+
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.site-header');
     const navToggle = document.querySelector('.nav-toggle');
@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const desktopQuery = window.matchMedia('(min-width: 992px)');
 
-    // Theme Toggle Logic
     const savedTheme = localStorage.getItem('theme') || 'light';
     html.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
@@ -33,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Mobile Nav Logic
     function openMobileMenu() {
         if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
         if (header) header.classList.add('nav-open');
@@ -45,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             backdrop.className = 'nav-backdrop';
             document.body.appendChild(backdrop);
             backdrop.addEventListener('click', closeMobileMenu);
-            // Force reflow
+
             backdrop.offsetHeight;
             backdrop.classList.add('active');
         }
@@ -74,12 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close menu on link click
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', closeMobileMenu);
     });
 
-    // Handle scroll state for navbar
     const handleScroll = () => {
         if (!header) return;
         if (window.scrollY > 50) {
@@ -89,16 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
-    // Handle screen resize
     desktopQuery.addEventListener('change', () => {
         if (desktopQuery.matches) {
             closeMobileMenu();
         }
     });
 
-    // Newsletter Form Handler
     window.handleNewsletterSubmit = function (event) {
         event.preventDefault();
         const emailInput = event.target.querySelector('input[type="email"]');
@@ -108,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Smooth scroll fallback for older browsers
     if (!CSS.supports('scroll-behavior', 'smooth')) {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -124,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Donation Modal Handler
     const donationModal = document.getElementById('donationModal');
     const modalClose = document.getElementById('modalClose');
     const donationForm = document.getElementById('donationForm');
@@ -132,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const customAmountGroup = document.getElementById('customAmountGroup');
         const amountSelect = document.getElementById('amount');
 
-        // Get all donate buttons in the page
         const donateButtons = document.querySelectorAll('.btn-primary, .btn-secondary, .nav-button');
 
         donateButtons.forEach(button => {
@@ -182,14 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('customAmount').value :
                 amountSelect.value;
 
-            alert(`Thank you, ${fullName}! Your donation of ${amount} RWF has been received. A confirmation will be sent to ${email}`);
+            alert(`Thank you, ${fullName}! Your donation of ${amount} USD has been received. A confirmation will be sent to ${email}`);
             donationForm.reset();
             donationModal.classList.remove('active');
             body.style.overflow = 'auto';
         });
     }
 
-    // Hero Background Slideshow
     const heroBackground = document.querySelector('.hero-bg');
     if (heroBackground) {
         const slides = heroBackground.querySelectorAll('.hero-slide');
@@ -203,7 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // About Section Image Carousel
     const carouselSlides = document.querySelectorAll('.carousel-slide');
     const carouselDots = document.querySelectorAll('.carousel-dot');
     if (carouselSlides.length > 0) {
@@ -230,7 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Impact Statistics Counter Animation
     function animateCounters() {
         const counters = document.querySelectorAll('.counter');
         counters.forEach(counter => {

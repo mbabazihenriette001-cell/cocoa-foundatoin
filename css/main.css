@@ -14,7 +14,6 @@
             --white: #ffffff;
             --black: #000000;
 
-            /* Theme mapped variables */
             --bg-color: var(--bg-light);
             --text-dominant: #222222;
             --text-muted: #555555;
@@ -80,7 +79,6 @@
             display: block;
         }
 
-        /* ==================== NAVIGATION ==================== */
         #nav-sentinel {
             position: absolute;
             top: 0;
@@ -301,7 +299,6 @@
                 box-shadow: -15px 0 45px rgba(0, 0, 0, 0.4);
             }
 
-            /* Backdrop for mobile menu */
             .nav-backdrop {
                 position: fixed;
                 inset: 0;
@@ -477,7 +474,6 @@
             }
         }
 
-        /* ==================== HERO SECTION ==================== */
         .hero {
             position: relative;
             padding: 7.5rem 1rem 5rem;
@@ -796,6 +792,7 @@
             border-color: #5a3325;
             transform: translateY(-1px);
         }
+
         .site-header .nav-button {
             background: var(--nav-cta-bg);
             color: var(--nav-cta-text);
@@ -814,7 +811,6 @@
             color: var(--primary-dark);
         }
 
-        /* ==================== SECTION STYLING ==================== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -848,7 +844,6 @@
             max-width: 800px;
         }
 
-        /* ==================== ABOUT SECTION ==================== */
         .about {
             background: var(--white);
             position: relative;
@@ -915,7 +910,6 @@
             }
         }
 
-        /* Centered Title Section */
         .about-title-section {
             text-align: left;
             margin-bottom: 4rem;
@@ -1090,7 +1084,6 @@
             z-index: 0;
         }
 
-        /* Hide placeholder styling when images are loaded */
         .carousel-slide[style*="background-image"] {
             font-size: 0;
         }
@@ -1099,7 +1092,6 @@
             background: rgba(0, 0, 0, 0.12);
         }
 
-        /* Carousel Controls */
         .carousel-indicators {
             position: absolute;
             bottom: 20px;
@@ -1131,6 +1123,48 @@
             background: rgba(255, 255, 255, 0.8);
         }
 
+
+        .secondary-hero {
+            min-height: 50vh !important;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            padding-top: var(--nav-height);
+        }
+
+        .secondary-hero .hero-bg::before {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .secondary-hero .hero-inner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            z-index: 2;
+        }
+
+        .header-dark-links:not(.is-scrolled) {
+            --nav-text: var(--text-dominant) !important;
+            --nav-cta-border: var(--primary-dark) !important;
+            --nav-cta-text: var(--white) !important;
+            --nav-cta-bg: var(--primary-dark) !important;
+        }
+
+        .header-dark-links:not(.is-scrolled) .nav-toggle span {
+            background: var(--text-dominant) !important;
+        }
+
+        .header-dark-links:not(.is-scrolled) .logo img.logo-default {
+            display: none !important;
+        }
+
+        .header-dark-links:not(.is-scrolled) .logo img.logo-scroll {
+            display: block !important;
+        }
+
         .about-stats-inline {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1160,7 +1194,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* ==================== PROGRAMS SECTION ==================== */
         .programs {
             background: var(--cream);
             border-top: 1px solid var(--border-light);
@@ -1180,6 +1213,7 @@
                 margin-top: 1rem;
             }
         }
+
         @media (min-width: 768px) {
             .programs-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -1263,7 +1297,6 @@
             transform: none;
         }
 
-        /* ==================== IMPACT SECTION ==================== */
         .impact {
             background: #3b251c;
             color: var(--white);
@@ -1350,7 +1383,6 @@
             letter-spacing: 1px;
         }
 
-        /* Success Stories Section */
         .impact-stories-title {
             color: var(--white);
             margin-bottom: 1.2rem;
@@ -1470,7 +1502,6 @@
             border-color: var(--white);
         }
 
-        /* ==================== STORIES SECTION ==================== */
         .stories {
             background: var(--white);
             position: relative;
@@ -1596,7 +1627,6 @@
             gap: 1rem;
         }
 
-        /* ==================== CTA BANNER SECTION ==================== */
         .cta-banner {
             background: #3b251c url('img/project.png') center/cover no-repeat;
             color: var(--white);
@@ -1662,7 +1692,6 @@
             color: var(--primary-dark);
         }
 
-        /* ==================== FOOTER ==================== */
         footer {
             background: #241610;
             color: var(--white);
@@ -2135,7 +2164,6 @@
             }
         }
 
-        /* ==================== ACCESSIBILITY ==================== */
         a:focus,
         button:focus {
             outline: 2px solid var(--primary-orange);
@@ -2157,14 +2185,12 @@
             top: 0;
         }
 
-        /* ==================== UTILITY CLASSES ==================== */
         .container-wide {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
         }
 
-        /* ==================== RESPONSIVE TEXT ==================== */
         @media (max-width: 480px) {
             .hero h1 {
                 font-size: 2.2rem;

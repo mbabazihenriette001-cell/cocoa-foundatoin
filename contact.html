@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header header-dark-links">
         <div class="nav-inner">
             <a href="index.html" class="logo">
                 <img src="img/world-cocoa.svg" alt="World Cocoa Foundation" class="logo-default">
@@ -55,8 +55,12 @@
     </header>
 
     <main id="main-content">
-        <section class="hero secondary-hero"
-            style="min-height: 30vh; padding: 8rem 1rem 4rem; background: var(--primary-dark); color: var(--white);">
+        <section class="hero secondary-hero">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-slide active"
+                    style="background-image: url('https://images.unsplash.com/photo-1504384308090-c89eecaaad8e?q=80&w=1600');">
+                </div>
+            </div>
             <div class="hero-inner">
                 <div class="hero-copy">
                     <h1>Contact Us</h1>
@@ -76,15 +80,15 @@
                             <div style="margin-bottom: 2.5rem;">
                                 <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Headquarters
                                 </h3>
-                                <p style="color: var(--text-light);">Washington, DC, USA</p>
+                                <p style="color: var(--text-light);">Musanze, Rwanda</p>
                             </div>
                             <div style="margin-bottom: 2.5rem;">
                                 <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Phone</h3>
-                                <p style="color: var(--text-light);">+1 (202) 123-4567</p>
+                                <p style="color: var(--text-light);">0798874111</p>
                             </div>
                             <div>
                                 <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Email</h3>
-                                <p style="color: var(--text-light);">info@worldcocoa.org</p>
+                                <p style="color: var(--text-light);">info@samba.us</p>
                             </div>
                         </div>
                     </div>
@@ -119,7 +123,7 @@
     <footer id="contact">
         <div class="container-wide">
             <div class="footer-content">
-                <!-- Company Info -->
+
                 <div class="footer-section">
                     <img src="img/world-cocoa.svg" alt="World Cocoa Foundation" class="footer-logo">
                     <p>WCF is an international membership organization that promotes sustainability in the cocoa sector.
@@ -134,7 +138,6 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
@@ -147,33 +150,31 @@
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
                 <div class="footer-section">
                     <h3>Reach Out To Us</h3>
                     <div class="contact-info">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <strong>Headquarters</strong><br>
-                            Washington, DC, USA
+                            Musanze, Rwanda
                         </div>
                     </div>
                     <div class="contact-info">
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div>
                             <strong>Phone</strong><br>
-                            +1 (202) 123-4567
+                            0798874111
                         </div>
                     </div>
                     <div class="contact-info">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <strong>Email</strong><br>
-                            info@worldcocoa.org
+                            info@samba.us
                         </div>
                     </div>
                 </div>
 
-                <!-- Newsletter -->
                 <div class="footer-section">
                     <h3>Stay Updated</h3>
                     <p>Subscribe to our newsletter for updates on our programs and impact stories.</p>
@@ -199,7 +200,6 @@
         </div>
     </footer>
 
-        <!-- Donation Modal -->
     <div class="donation-modal" id="donationModal">
         <div class="modal-content">
             <button class="modal-close" id="modalClose">&times;</button>
@@ -240,7 +240,6 @@
             </form>
         </div>
     </div>
-
 
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -21,8 +21,7 @@
     <div id="nav-sentinel" aria-hidden="true"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- HEADER & NAVIGATION -->
-    <header class="site-header">
+    <header class="site-header header-dark-links">
         <div class="nav-inner">
             <a href="index.html" class="logo">
                 <img src="img/world-cocoa.svg" alt="World Cocoa Foundation" class="logo-default">
@@ -63,9 +62,12 @@
     </header>
 
     <main id="main-content">
-        <!-- PAGE HERO -->
-        <section class="hero secondary-hero"
-            style="min-height: 40vh; padding: 10rem 1rem 5rem; background: var(--bg-color);">
+        <section class="hero secondary-hero">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-slide active"
+                    style="background-image: url('https://images.unsplash.com/photo-1504711432814-e5977595217e?q=80&w=1600');">
+                </div>
+            </div>
             <div class="hero-inner">
                 <div class="hero-copy">
                     <span class="hero-kicker">Latest Updates</span>
@@ -76,12 +78,10 @@
             </div>
         </section>
 
-        <!-- NEWS LIST (NO CARDS) -->
         <section class="news-list">
             <div class="container-wide">
                 <div class="news-items" style="display: flex; flex-direction: column; gap: 6rem;">
 
-                    <!-- News Item 1 -->
                     <article class="news-entry"
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;"
                         data-aos="fade-up">
@@ -105,7 +105,6 @@
 
                     <hr style="border: none; border-top: 1px solid var(--border-light);">
 
-                    <!-- News Item 2 -->
                     <article class="news-entry"
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;"
                         data-aos="fade-up">
@@ -139,7 +138,7 @@
     <footer id="contact">
         <div class="container-wide">
             <div class="footer-content">
-                <!-- Company Info -->
+
                 <div class="footer-section">
                     <img src="img/world-cocoa.svg" alt="World Cocoa Foundation" class="footer-logo">
                     <p>WCF is an international membership organization that promotes sustainability in the cocoa sector.
@@ -154,7 +153,6 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
@@ -167,33 +165,31 @@
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
                 <div class="footer-section">
                     <h3>Reach Out To Us</h3>
                     <div class="contact-info">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <strong>Headquarters</strong><br>
-                            Washington, DC, USA
+                            Musanze, Rwanda
                         </div>
                     </div>
                     <div class="contact-info">
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div>
                             <strong>Phone</strong><br>
-                            +1 (202) 123-4567
+                            0798874111
                         </div>
                     </div>
                     <div class="contact-info">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <strong>Email</strong><br>
-                            info@worldcocoa.org
+                            info@samba.us
                         </div>
                     </div>
                 </div>
 
-                <!-- Newsletter -->
                 <div class="footer-section">
                     <h3>Stay Updated</h3>
                     <p>Subscribe to our newsletter for updates on our programs and impact stories.</p>
@@ -219,7 +215,6 @@
         </div>
     </footer>
 
-        <!-- Donation Modal -->
     <div class="donation-modal" id="donationModal">
         <div class="modal-content">
             <button class="modal-close" id="modalClose">&times;</button>
@@ -260,7 +255,6 @@
             </form>
         </div>
     </div>
-
 
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
