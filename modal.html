@@ -1,0 +1,41 @@
+    <!-- Donation Modal -->
+    <div class="donation-modal" id="donationModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <h2>Support Our mission</h2>
+                <p>Your contribution helps us build a sustainable cocoa future for farmers and the planet.</p>
+            </div>
+            <form class="donation-form" id="donationForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 (xxx) xxx-xxxx" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Donation Amount (USD)</label>
+                    <select id="amount" name="amount" required>
+                        <option value="">Select amount</option>
+                        <option value="25">$25</option>
+                        <option value="50">$50</option>
+                        <option value="100">$100</option>
+                        <option value="250">$250</option>
+                        <option value="500">$500</option>
+                        <option value="custom">Custom Amount</option>
+                    </select>
+                </div>
+                <div class="form-group" id="customAmountGroup" style="display: none;">
+                    <label for="customAmount">Enter Custom Amount (USD)</label>
+                    <input type="number" id="customAmount" name="customAmount" placeholder="Enter amount" min="5">
+                </div>
+                <button type="submit" class="btn btn-primary">Donate Now</button>
+            </form>
+        </div>
+    </div>
